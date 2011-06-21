@@ -87,9 +87,9 @@ var nodeTypeRegex = /textarea|select/i,
  */
 function handleKeyEvents(e) {
     // Don't fire in text-accepting inputs that we didn't directly bind to
-    if (this !== event.target &&
-        (nodeTypeRegex.test(event.target.nodeName) ||
-         inputTypeRegex.test(event.target.type))) {
+    if (this !== e.target &&
+        (nodeTypeRegex.test(e.target.nodeName) ||
+         inputTypeRegex.test(e.target.type))) {
         return;
     }
     
